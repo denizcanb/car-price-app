@@ -5,8 +5,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app/ ./app/
-COPY model/ ./model/
+COPY main.py ./app/main.py
+COPY car_price_pipe.pkl ./model/car_price_pipe.pkl
 
 EXPOSE 8000
 
